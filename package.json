@@ -1,0 +1,27 @@
+{
+  "name": "gallery",
+  "version": "0.0.1",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.11.1",
+    "critical": "latest",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "latest",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-html-extend": "^1.1.6",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "latest",
+    "gulp-less": "latest",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "latest",
+    "gulp-sync": "latest",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "latest",
+    "gulp-uncss": "^1.0.4",
+    "yargs": "^11.0.0"
+  }
+}
