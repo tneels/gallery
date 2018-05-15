@@ -93,7 +93,7 @@
   width: 100%;
   > *{
     display: table-cell !important;
-    
+
   }
   &.vertical-centering{
     > *{
@@ -190,7 +190,7 @@
       background-image: url("@{images}/@{file}-sm.jpg"); // 991px
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
-      background-image: url("@{images}/@{file}-md.jpg"); // 1199px 
+      background-image: url("@{images}/@{file}-md.jpg"); // 1199px
     }
   }
 
@@ -202,10 +202,10 @@
       background-image: url("@{images}/@{file}-sm-portrait.jpg"); // 991px
     }
     @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
-      background-image: url("@{images}/@{file}-md-portrait.jpg"); // 1199px 
+      background-image: url("@{images}/@{file}-md-portrait.jpg"); // 1199px
     }
   }
-    
+
   @media (min-width: @screen-lg-min){
     background-image: url("@{images}/@{file}-lg-1x.jpg"); // 2560px
 
@@ -216,4 +216,10 @@
       background-image: url("@{images}/@{file}-lg-2x.jpg"); // 5120px
     }
   }
+}
+
+.container{
+	width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
 }

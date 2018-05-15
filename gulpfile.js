@@ -13,6 +13,7 @@ const plumber = require('gulp-plumber');
 // JS
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const sourcemaps = require('gulp-sourcemaps');
 // html
 const extender = require('gulp-html-extend');
 const twig = require('gulp-twig');
@@ -29,8 +30,8 @@ const argv = require('yargs').argv;
 const data = require('./src/data.json');
 
 
- 
-// Add a task to render the output 
+
+// Add a task to render the output
 gulp.task('help', taskListing);
 
 // Paths
@@ -138,7 +139,7 @@ gulp.task('js', () => {
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(babel({
       presets: ['env']
-    })) 
+    }))
     .pipe(when(argv.prod, uglify()))
     .pipe(concat('scripts.js'))
     .pipe(when(!argv.prod, sourcemaps.write('.')))
@@ -182,7 +183,7 @@ gulp.task('browser-sync', () => {
 });
 
 // Tâche "build" = toutes les tâches ensemble
-gulp.task('build', gulpsync.sync(['twig', 'css', 'libjs', 'js', 'img', 'uploads']));
+gulp.task('build', gulpsync.sync(['twig', 'css', 'js', 'img', 'uploads']));
 
 gulp.task('watch', () => {
   browserSync.init({
