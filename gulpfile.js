@@ -135,7 +135,7 @@ gulp.task('critical', gulpsync.sync(['html', 'css']), function(cb) {
 });
 
 gulp.task('js', () => {
- return gulp.src(`${assets}/js/**/*.js`)
+ return gulp.src([`${assets}/js/*.js`, `${assets}/js/**/*.js`])
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(babel({
       presets: ['env']
