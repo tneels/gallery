@@ -11,17 +11,17 @@
 // });
 
 
-$('.slick-for').slick({
+$('.Gallery-slickFor').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: false,
-	asNavFor: '.slick-nav'
+	asNavFor: '.Gallery-slickNav'
 });
 
-$('.slick-nav').slick({
+$('.Gallery-slickNav').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	asNavFor: '.slick-for',
+	asNavFor: '.Gallery-slickFor',
 	dots: true,
 	centerMode: true,
 	focusOnSelect: true,
