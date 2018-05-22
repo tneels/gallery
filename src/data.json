@@ -2,10 +2,31 @@
 	"title": "project name",
 	"index": {
 		"title": "home page",
-		"list": [
-			"item 1",
-			"item 2",
-			"item 3"
-		]
+		"list": {
+			"art1": {
+				"title" : "Hello",
+				"author" : "J.R. Smith",
+				"city" : "Paris",
+				"expo" : "Fine Art Gallery",
+				"dates" : "May 27 - Jun 18",
+				"src" : "https://fakeimg.pl/350x200/?text=Hello"
+			},
+			"art2": {
+				"title" : "World",
+				"author" : "J.R. Smith",
+				"city" : "London",
+				"expo" : "Mary Poppins Gallery",
+				"dates" : "Jun 21 - Jul 15",
+				"src" : "https://fakeimg.pl/350x200/?text=World"
+			},
+			"art3": {
+				"title" : "Hello World",
+				"author" : "J.R. Smith",
+				"city" : "New York",
+				"expo" : "Fine Art Gallery",
+				"dates" : "Jul 18 - Jul 31",
+				"src" : "https://fakeimg.pl/350x200/?text=Hello+World"
+			}
+		}
 	}
 }
