@@ -3,24 +3,36 @@
 
 {% block page %}
 	<div class="container">
-		<header>
-	        <h1 class="fs30">hello world</h1>
-	    </header>
+		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<symbol id="icon-arrow-left" viewBox="0 0 9 32">
+					<title>arrow-left</title>
+					<path d="M7.67 0l0.847 1.773-6.775 14.177 6.811 14.253-0.858 1.797-7.695-16.127z"></path>
+				</symbol>
+				<symbol id="icon-arrow-right" viewBox="0 0 9 32">
+					<title>arrow-right</title>
+					<path d="M0.883 32l-0.847-1.773 6.775-14.177-6.811-14.253 0.858-1.797 7.695 16.127z"></path>
+				</symbol>
+			</defs>
+		</svg>
+
 
 		<div class="Gallery">
 			<section class="Gallery-section">
-				<div class="Gallery-slickNav">
-					{% for value in index.list %}
-						<div class="Gallery-infosWrapper">
-							<div class="Gallery-infos">
-					            <div class="Gallery-title">{{ value.title }}</div>
-					            <div class="Gallery-author">{{ value.author }}</div>
-					            <div class="Gallery-city">{{ value.city }}</div>
-					            <div class="Gallery-expo">{{ value.expo }}</div>
-					            <div class="Gallery-dates">{{ value.dates }}</div>
+				<div class="Gallery-sectionWrapper">
+					<div class="Gallery-slickNav">
+						{% for value in index.list %}
+							<div class="Gallery-infosWrapper">
+								<div class="Gallery-infos">
+						            <div class="Gallery-title font-2">{{ value.title }}</div>
+						            <div class="Gallery-author">{{ value.author }}</div>
+						            <div class="Gallery-city">{{ value.city }}</div>
+						            <div class="Gallery-expo">{{ value.expo }}</div>
+						            <div class="Gallery-dates">{{ value.dates }}</div>
+								</div>
 							</div>
-						</div>
-			        {% endfor %}
+				        {% endfor %}
+					</div>
 				</div>
 			</section>
 

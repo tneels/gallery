@@ -25,6 +25,9 @@ $('.Gallery-slickNav').slick({
 	dots: true,
 	centerMode: true,
 	focusOnSelect: true,
-	arrows: false,
-	fade: true
+	arrows: true,
+	fade: true,
+	appendArrows: $('.Gallery'),
+	prevArrow: '<div class="glyph fs1 Gallery-arrow Gallery-prevArrow"><div class="clearfix pbs"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></div></div>',
+	nextArrow: '<div class="glyph fs1 Gallery-arrow Gallery-nextArrow"><div class="clearfix pbs"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></div></div>'
 });

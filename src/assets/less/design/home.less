@@ -1,16 +1,46 @@
 .Gallery{
 	display: flex;
 	flex-flow: row nowrap;
-	width: 100%;
+	padding: 0 2em;
+	position: relative;
 	&-section {
 		flex: 0 0 50%;
 		width: 50%;
 		text-align: center;
+		position: relative;
+		&Wrapper{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
+	&-slickNav{
+
 	}
 	&-infosWrapper {
-		
+
 	}
 	&-title {
 		font-size: 30px;
+	}
+
+	&-arrow{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+		transition: opacity .25s linear;
+	}
+
+	&:hover .Gallery-arrow{
+		opacity: 1;
+	}
+
+	&-prevArrow{
+		left: 0;
+	}
+	&-nextArrow{
+		right: 0;
 	}
 }
