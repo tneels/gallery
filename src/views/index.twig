@@ -16,19 +16,19 @@
 			</defs>
 		</svg>
 
+		<h1 class="font-2">J.R. Smith</h1>
+		<h2 class="font-2">Smith Gallery</h2>
 
 		<div class="Gallery">
-			<section class="Gallery-section">
+			<section class="Gallery-section Gallery-sectionLeft">
 				<div class="Gallery-sectionWrapper">
 					<div class="Gallery-slickNav">
 						{% for value in index.list %}
 							<div class="Gallery-infosWrapper">
 								<div class="Gallery-infos">
 						            <div class="Gallery-title font-2">{{ value.title }}</div>
-						            <div class="Gallery-author">{{ value.author }}</div>
 						            <div class="Gallery-city">{{ value.city }}</div>
-						            <div class="Gallery-expo">{{ value.expo }}</div>
-						            <div class="Gallery-dates">{{ value.dates }}</div>
+						            <div class="Gallery-dates font-2">{{ value.dates }}</div>
 								</div>
 							</div>
 				        {% endfor %}
@@ -36,10 +36,10 @@
 				</div>
 			</section>
 
-			<section class="Gallery-section">
+			<section class="Gallery-section Gallery-sectionRight">
 				<div class="Gallery-slickFor">
 					{% for value in index.list %}
-			            <img src="{{ value.src }}">
+			            <div><img src="{{ value.src }}"></div>
 			        {% endfor %}
 				</div>
 			</section>

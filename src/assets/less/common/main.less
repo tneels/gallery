@@ -27,19 +27,33 @@ a{
 // ENLEVER LE OUTLINE AU FOCUS
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
-.btn:focus, 
-.btn:active:focus, 
-.btn.active:focus, 
-.btn.focus, 
-.btn.focus:active, 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
 .btn.active.focus{
 	outline: none;
 }
 
 
 
-h1, .h1{font-size: 46px;}
-h2, .h2{font-size: 40px;}
+h1, .h1 {
+	font-size: 46px;
+	font-weight: normal;
+	margin-bottom: 0;
+	@media (min-width: 641px) {
+		padding: 0 32px;
+	}
+}
+h2, .h2 {
+	font-size: 40px;
+	font-weight: normal;
+	margin-top: 0;
+	@media (min-width: 641px) {
+		padding: 0 32px;
+	}
+}
 h3, .h3{font-size: 32px;}
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4{.font-rendering;}
@@ -52,10 +66,11 @@ ul{
 
 img{
 	max-width: 100%;
+	min-height: 0;
 }
 
-table, 
-.table, 
+table,
+.table,
 .tablecss{
 	img{
 		max-width: none; // webkit bugfix

@@ -15,7 +15,15 @@ $('.Gallery-slickFor').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: false,
-	asNavFor: '.Gallery-slickNav'
+	asNavFor: '.Gallery-slickNav',
+	responsive: [
+		{
+		breakpoint: 640,
+		settings: {
+			arrows: false,
+			dots: true
+		}
+	}]
 });
 
 $('.Gallery-slickNav').slick({
@@ -27,7 +35,15 @@ $('.Gallery-slickNav').slick({
 	focusOnSelect: true,
 	arrows: true,
 	fade: true,
+	adaptiveHeight: true,
 	appendArrows: $('.Gallery'),
 	prevArrow: '<div class="glyph fs1 Gallery-arrow Gallery-prevArrow"><div class="clearfix pbs"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></div></div>',
-	nextArrow: '<div class="glyph fs1 Gallery-arrow Gallery-nextArrow"><div class="clearfix pbs"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></div></div>'
+	nextArrow: '<div class="glyph fs1 Gallery-arrow Gallery-nextArrow"><div class="clearfix pbs"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></div></div>',
+	responsive: [{
+		breakpoint: 640,
+		settings: {
+			arrows: false,
+			dots: false
+		}
+	}]
 });
