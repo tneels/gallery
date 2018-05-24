@@ -7,6 +7,7 @@
     "browser-sync": "^2.11.1",
     "critical": "latest",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-concat": "latest",
     "gulp-cssnano": "^2.0.0",
