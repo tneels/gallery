@@ -7,6 +7,7 @@ const babel = require('gulp-babel');
 const less = require('gulp-less');
 const nano = require('gulp-cssnano');
 const uncss = require('gulp-uncss');
+const autoprefixer = require('gulp-autoprefixer');
 
 const critical = require('critical').stream;
 const plumber = require('gulp-plumber');
@@ -50,6 +51,10 @@ gulp.task('css', () => {
         }
     }))
     .pipe(less())
+	.pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(when(argv.prod, uncss({
       html: [`${dist}/*.html`],
       timeout: 1000,
