@@ -1,2 +1,0 @@
-# gallery
-simple artist gallery
