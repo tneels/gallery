@@ -7,14 +7,12 @@ const babel = require('gulp-babel');
 const less = require('gulp-less');
 const nano = require('gulp-cssnano');
 const uncss = require('gulp-uncss');
-const autoprefixer = require('gulp-autoprefixer');
 
 const critical = require('critical').stream;
 const plumber = require('gulp-plumber');
 // JS
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const sourcemaps = require('gulp-sourcemaps');
 // html
 const extender = require('gulp-html-extend');
 const twig = require('gulp-twig');
@@ -29,11 +27,10 @@ const browserSync = require('browser-sync');
 const when = require('gulp-if');
 const argv = require('yargs').argv;
 const data = require('./src/data.json');
-const ghPages = require('gulp-gh-pages');
 
 
-
-// Add a task to render the output
+ 
+// Add a task to render the output 
 gulp.task('help', taskListing);
 
 // Paths
@@ -52,29 +49,42 @@ gulp.task('css', () => {
         }
     }))
     .pipe(less())
-	.pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
     .pipe(when(argv.prod, uncss({
       html: [`${dist}/*.html`],
       timeout: 1000,
       ignore: [
+        /show-menu/,
+        /open/,
         /slick/,
         /active/,
         /next/,
         /prev/,
-        /wf-/,
-		/Gallery/,
-		/icon/
+        /no-/,
+        /ink/,
+        /animate/,
+        /affix/,
+        /kr-/,
+        /wf-/
     ]
     })))
     .pipe(when(argv.prod, nano()))
     // .pipe(plumber.stop())
-    .pipe(rename({
+    .pipe(when(argv.prod, rename({
       suffix: '.min'
-    }))
+    })))
     .pipe(gulp.dest(`${distAssets}/css`))
+    .pipe(browserSync.stream());
+});
+
+// Tâche "html" = includes HTML
+gulp.task('html', function() {
+  return  gulp.src(`${source}/views/*.html`)
+    // Generates HTML includes
+    .pipe(extender({
+      annotations: false,
+      verbose: false
+    })) // default options
+    .pipe(gulp.dest(dist))
     .pipe(browserSync.stream());
 });
 
@@ -91,25 +101,25 @@ gulp.task('twig', () => {
 });
 
 // Tâche "critical" = critical inline CSS
-gulp.task('critical', gulpsync.sync(['twig', 'css']), function(cb) {
+gulp.task('critical', gulpsync.sync(['html', 'css']), function(cb) {
   return  gulp.src(dist + '/*.html')
-    .pipe(when(argv.prod, critical({
-		base: dist,
-		dest: 'assets/css/critical.min.css',
-		// dest: dist + '/index-critical.html',
-		inline: false,
-		minify: true,
-		extract: true,
-		css: [ dist + '/assets/css/style.min.css' ],
-		ignore: ['@font-face',/url\(/],
-		dimensions: [{
-		height: 480,
-		width: 320
-		}, {
-		height: 1440,
-		width: 2560
-		}]
-  	})))
+    .pipe(critical({
+      base: dist,
+      dest: dist + '/css/critical.min.css',
+      // dest: dist + '/index-critical.html',
+      inline: false,
+      minify: true,
+      extract: true,
+      css: [ dist + '/css/style.min.css' ],
+      ignore: ['@font-face',/url\(/],
+      dimensions: [{
+        height: 480,
+        width: 320
+      }, {
+        height: 1440,
+        width: 2560
+      }]
+    }))
     .pipe(gulp.dest(dist));
 
   // critical.generate({
@@ -124,11 +134,11 @@ gulp.task('critical', gulpsync.sync(['twig', 'css']), function(cb) {
 });
 
 gulp.task('js', () => {
- return gulp.src([`${assets}/js/*.js`, `${assets}/js/**/*.js`])
+ return gulp.src(`${assets}/js/**/*.js`)
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(babel({
       presets: ['env']
-    }))
+    })) 
     .pipe(when(argv.prod, uglify()))
     .pipe(concat('scripts.js'))
     .pipe(when(!argv.prod, sourcemaps.write('.')))
@@ -171,15 +181,8 @@ gulp.task('browser-sync', () => {
     });
 });
 
-gulp.task('ghPages', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages({
-		force: true
-	}));
-});
-
 // Tâche "build" = toutes les tâches ensemble
-gulp.task('build', gulpsync.sync(['twig', 'critical', 'css', 'js', 'img', 'uploads']));
+gulp.task('build', gulpsync.sync(['twig', 'css', 'libjs', 'js', 'img', 'uploads']));
 
 gulp.task('watch', () => {
   browserSync.init({

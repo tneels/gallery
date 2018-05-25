@@ -1,0 +1,17 @@
+{# layout.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+	{% include 'head.twig' %}
+</head>
+
+<body>
+	{% include 'header.twig' %}
+
+	<div class="content content-wrap">
+		{% block page %}{% endblock %}
+	</div>
+
+	{% include 'footer.twig' %}
+</body>
+</html>
