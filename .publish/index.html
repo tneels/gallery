@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Gallery</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'> -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script>
+	  WebFont.load({
+		google: {
+		  families: ['PT+Serif']
+		}
+	  });
+	</script>
+
+	<link rel="stylesheet" href="assets/css/critical.min.css"> <!-- Load css above the fold -->
+
+	<link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
+	<script>
+	/*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+	!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
+	</script>
+
+	<!-- <link rel="stylesheet" href="assets/css/style.css"> <!-- dev -->
+</head>
+</head>
+
+<body>
+	<!-- <header id="header" class="navbar" role="navigation">
+	<div class="container">
+		site header
+	</div>
+</header> -->
+
+	<div class="content content-wrap">
+		
+	<div class="container">
+		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<symbol id="icon-arrow-left" viewBox="0 0 9 32">
+					<title>arrow-left</title>
+					<path d="M7.67 0l0.847 1.773-6.775 14.177 6.811 14.253-0.858 1.797-7.695-16.127z"></path>
+				</symbol>
+				<symbol id="icon-arrow-right" viewBox="0 0 9 32">
+					<title>arrow-right</title>
+					<path d="M0.883 32l-0.847-1.773 6.775-14.177-6.811-14.253 0.858-1.797 7.695 16.127z"></path>
+				</symbol>
+			</defs>
+		</svg>
+
+		<h1 class="font-2">J.R. Smith</h1>
+		<h2 class="font-2">Smith Gallery</h2>
+
+		<div class="Gallery">
+			<section class="Gallery-section Gallery-sectionLeft">
+				<div class="Gallery-sectionWrapper">
+					<div class="Gallery-slickNav">
+						
+							<div class="Gallery-infosWrapper">
+								<div class="Gallery-infos">
+						            <div class="Gallery-infos-title font-2">Hello</div>
+						            <div class="Gallery-infos-city">Paris</div>
+						            <div class="Gallery-infos-dates font-2">May 27 - Jun 18</div>
+								</div>
+							</div>
+				        
+							<div class="Gallery-infosWrapper">
+								<div class="Gallery-infos">
+						            <div class="Gallery-infos-title font-2">World</div>
+						            <div class="Gallery-infos-city">London</div>
+						            <div class="Gallery-infos-dates font-2">Jun 21 - Jul 15</div>
+								</div>
+							</div>
+				        
+							<div class="Gallery-infosWrapper">
+								<div class="Gallery-infos">
+						            <div class="Gallery-infos-title font-2">Hello World</div>
+						            <div class="Gallery-infos-city">New York</div>
+						            <div class="Gallery-infos-dates font-2">Jul 18 - Jul 31</div>
+								</div>
+							</div>
+				        
+					</div>
+				</div>
+			</section>
+
+			<section class="Gallery-section Gallery-sectionRight">
+				<div class="Gallery-slickFor">
+					
+			            <div class="Gallery-imgContainer"><img src="https://fakeimg.pl/350x200/bada55/?text=Hello"></div>
+			        
+			            <div class="Gallery-imgContainer"><img src="https://fakeimg.pl/350x200/abc/?text=World"></div>
+			        
+			            <div class="Gallery-imgContainer"><img src="https://fakeimg.pl/350x200/?text=Hello+World"></div>
+			        
+				</div>
+			</section>
+		</div>
+	</div>
+	</div>
+
+	<!-- <footer id="footer">
+	<div class="container">
+		&copy; Thomas Neels - SASU
+	</div>
+</footer>
+ -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>
