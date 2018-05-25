@@ -1,7 +1,6 @@
 {
 	"title": "Gallery",
 	"index": {
-		"title": "home page",
 		"list": {
 			"art1": {
 				"title" : "Hello",
@@ -17,7 +16,7 @@
 				"city" : "London",
 				"expo" : "Mary Poppins Gallery",
 				"dates" : "Jun 21 - Jul 15",
-				"src" : "https://fakeimg.pl/350x300/abc/?text=World"
+				"src" : "https://fakeimg.pl/350x200/abc/?text=World"
 			},
 			"art3": {
 				"title" : "Hello World",
@@ -25,7 +24,7 @@
 				"city" : "New York",
 				"expo" : "Fine Art Gallery",
 				"dates" : "Jul 18 - Jul 31",
-				"src" : "https://fakeimg.pl/350x250/?text=Hello+World"
+				"src" : "https://fakeimg.pl/350x200/?text=Hello+World"
 			}
 		}
 	}

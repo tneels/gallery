@@ -12,16 +12,19 @@
 		// text-align: center;
 		position: relative;
 		&Wrapper{
-			// width: 100%;
+			width: 100%;
 			@media (min-width: 641px) {
-				// position: absolute;
-				// top: 50%;
-				// transform: translateY(-50%);
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
 			}
 		}
 	}
 	&-imgContainer {
 		min-width: 0;
+		img{
+			width: 100%;
+		}
 	}
 	&-slickNav{
 
@@ -77,9 +80,11 @@
 		&Left {
 			@media (max-width: 960px) {
 				flex-basis: 33.3333%;
+				max-width: 33.3333%;
 			}
 			@media (max-width: 640px) {
 				flex-basis: 100%;
+				max-width: 100%;
 				order: 2;
 				margin-top: 30px;
 			}
@@ -87,9 +92,11 @@
 		&Right {
 			@media (max-width: 960px) {
 				flex-basis: 66.6666%;
+				max-width: 66.6666%;
 			}
 			@media (max-width: 640px) {
 				flex-basis: 100%;
+				max-width: 100%;
 			}
 		}
 	}
