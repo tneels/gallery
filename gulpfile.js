@@ -29,7 +29,7 @@ const browserSync = require('browser-sync');
 const when = require('gulp-if');
 const argv = require('yargs').argv;
 const data = require('./src/data.json');
-const ghPages = require('gulp-gh-pages');
+const ghPages = require('gulp-gh-pages-will');
 
 
 
@@ -66,7 +66,9 @@ gulp.task('css', () => {
         /prev/,
         /wf-/,
 		/Gallery/,
-		/icon/
+		/icon/,
+		/container/,
+		/h/
     ]
     })))
     .pipe(when(argv.prod, nano()))
@@ -179,7 +181,8 @@ gulp.task('ghPages', function() {
 });
 
 // Tâche "build" = toutes les tâches ensemble
-gulp.task('build', gulpsync.sync(['twig', 'critical', 'css', 'js', 'img', 'uploads']));
+gulp.task('build', gulpsync.sync(['critical', 'css', ['js', 'img', 'uploads']]));
+gulp.task('deploy', gulpsync.sync(['build', 'ghPages']));
 
 gulp.task('watch', () => {
   browserSync.init({

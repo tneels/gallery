@@ -11,7 +11,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-concat": "latest",
     "gulp-cssnano": "^2.0.0",
-    "gulp-gh-pages": "^0.5.4",
+    "gulp-gh-pages-will": "^0.5.5",
     "gulp-html-extend": "^1.1.6",
     "gulp-htmlmin": "^4.0.0",
     "gulp-if": "^2.0.2",
