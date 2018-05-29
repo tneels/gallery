@@ -15,6 +15,7 @@ $('.Gallery-slickFor').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: false,
+	lazyLoad: 'progressive',
 	asNavFor: '.Gallery-slickNav',
 	responsive: [
 		{
@@ -31,7 +32,6 @@ $('.Gallery-slickNav').slick({
 	slidesToScroll: 1,
 	asNavFor: '.Gallery-slickFor',
 	dots: true,
-	centerMode: true,
 	focusOnSelect: true,
 	arrows: true,
 	fade: true,
