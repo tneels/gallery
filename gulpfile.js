@@ -21,6 +21,7 @@ const twig = require('gulp-twig');
 const htmlmin = require('gulp-htmlmin');
 // img
 const imagemin = require('gulp-imagemin');
+const newer = require('gulp-newer');
 // all
 const gulpsync = require('gulp-sync')(gulp);
 const rename = require('gulp-rename');
@@ -159,10 +160,12 @@ gulp.task('img', () => {
     .pipe(gulp.dest(`${dist}/img`));
 });
 
+// Minify any new image
 gulp.task('uploads', () => {
-  return gulp.src(source + '/img/uploads/*.{png,jpg,jpeg,gif,svg}')
+  return gulp.src(`${assets}/uploads/**`)
+  	.pipe(newer(`${distAssets}/uploads`))
     .pipe(imagemin())
-    .pipe(gulp.dest(`${dist}/img/uploads`));
+    .pipe(gulp.dest(`${distAssets}/uploads`));
 });
 
 gulp.task('browser-sync', () => {
@@ -190,6 +193,7 @@ gulp.task('watch', () => {
           baseDir: dist
       }
   });
+  gulp.watch(`${assets}/uploads/**`, ['uploads']);
   gulp.watch([`${assets}/less/*.less`, `${assets}/less/**/*.less`], ['css']);
   gulp.watch([`${assets}/js/*.js`, `${assets}/js/module/*.js`], ['js', browserSync.reload]);
   gulp.watch([`${source}/views/*.twig`, `${source}/views/**/*.twig`], ['twig', browserSync.reload]);

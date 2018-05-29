@@ -17,6 +17,7 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "latest",
     "gulp-less": "latest",
+    "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "latest",
     "gulp-sourcemaps": "^2.6.4",

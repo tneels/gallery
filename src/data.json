@@ -1,30 +1,28 @@
 {
 	"title": "Gallery",
+	"artist": {
+		"name": "Florian Nicolle",
+		"gallery": "Smith Gallery"
+	},
 	"index": {
 		"list": {
 			"art1": {
 				"title" : "Hello",
-				"author" : "J.R. Smith",
 				"city" : "Paris",
-				"expo" : "Fine Art Gallery",
 				"dates" : "May 27 - Jun 18",
-				"src" : "https://fakeimg.pl/350x200/bada55/?text=Hello"
+				"src" : "iverson.jpg"
 			},
 			"art2": {
 				"title" : "World",
-				"author" : "J.R. Smith",
 				"city" : "London",
-				"expo" : "Mary Poppins Gallery",
 				"dates" : "Jun 21 - Jul 15",
-				"src" : "https://fakeimg.pl/350x200/abc/?text=World"
+				"src" : "foot-us-2.jpg"
 			},
 			"art3": {
 				"title" : "Hello World",
-				"author" : "J.R. Smith",
 				"city" : "New York",
-				"expo" : "Fine Art Gallery",
 				"dates" : "Jul 18 - Jul 31",
-				"src" : "https://fakeimg.pl/350x200/?text=Hello+World"
+				"src" : "portrait-2.jpg"
 			}
 		}
 	}

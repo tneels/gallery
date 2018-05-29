@@ -16,8 +16,8 @@
 			</defs>
 		</svg>
 
-		<h1 class="font-2">J.R. Smith</h1>
-		<h2 class="font-2">Smith Gallery</h2>
+		<h1 class="font-2">{{ artist.name }}</h1>
+		<h2 class="font-2">{{ artist.gallery }}</h2>
 
 		<div class="Gallery">
 			<section class="Gallery-section Gallery-sectionLeft">
@@ -39,7 +39,7 @@
 			<section class="Gallery-section Gallery-sectionRight">
 				<div class="Gallery-slickFor">
 					{% for value in index.list %}
-			            <div class="Gallery-imgContainer"><img src="{{ value.src }}"></div>
+			            <div class="Gallery-imgContainer"><img src="assets/uploads/{{ value.src }}"></div>
 			        {% endfor %}
 				</div>
 			</section>
