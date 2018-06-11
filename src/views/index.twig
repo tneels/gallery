@@ -2,47 +2,84 @@
 {% extends "_includes/layout.twig" %}
 
 {% block page %}
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon-arrow-left" viewBox="0 0 9 32">
+				<title>arrow-left</title>
+				<path d="M7.67 0l0.847 1.773-6.775 14.177 6.811 14.253-0.858 1.797-7.695-16.127z"></path>
+			</symbol>
+			<symbol id="icon-arrow-right" viewBox="0 0 9 32">
+				<title>arrow-right</title>
+				<path d="M0.883 32l-0.847-1.773 6.775-14.177-6.811-14.253 0.858-1.797 7.695 16.127z"></path>
+			</symbol>
+		</defs>
+	</svg>
+
+
 	<div class="container">
-		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<defs>
-				<symbol id="icon-arrow-left" viewBox="0 0 9 32">
-					<title>arrow-left</title>
-					<path d="M7.67 0l0.847 1.773-6.775 14.177 6.811 14.253-0.858 1.797-7.695-16.127z"></path>
-				</symbol>
-				<symbol id="icon-arrow-right" viewBox="0 0 9 32">
-					<title>arrow-right</title>
-					<path d="M0.883 32l-0.847-1.773 6.775-14.177-6.811-14.253 0.858-1.797 7.695 16.127z"></path>
-				</symbol>
-			</defs>
-		</svg>
+		<div class="row">
+			<div class="col-lg-6">
+				<h1>{{ artist.name }}</h1>
+				<h2><i>{{ artist.profession }}</i></h2>
+				<img src="assets/uploads/{{ artist.signature.src }}" alt="{{ artist.signature.alt }}">
 
-		<h1 class="font-2">{{ artist.name }}</h1>
-		<h2 class="font-2">{{ artist.gallery }}</h2>
-
-		<div class="Gallery">
-			<section class="Gallery-section Gallery-sectionLeft">
-				<div class="Gallery-sectionWrapper">
-					<div class="Gallery-slickNav">
-						{% for value in index.list %}
-							<div class="Gallery-infosWrapper">
-								<div class="Gallery-infos">
-						            <div class="Gallery-infos-title font-2">{{ value.title }}</div>
-						            <div class="Gallery-infos-city">{{ value.city }}</div>
-						            <div class="Gallery-infos-dates font-2">{{ value.dates }}</div>
-								</div>
+				<div class="Gallery">
+					<section class="Gallery-section Gallery-sectionLeft">
+						<div class="Gallery-sectionWrapper">
+							<div class="Gallery-slickNav">
+								{% for value in index.list %}
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">{{ value.title }}</div>
+								            <div class="Gallery-infos-dimensions">{{ value.dimensions }}</div>
+								            <div class="Gallery-infos-technique">{{ value.technique }}</div>
+										</div>
+									</div>
+						        {% endfor %}
 							</div>
-				        {% endfor %}
-					</div>
-				</div>
-			</section>
+						</div>
+					</section>
 
-			<section class="Gallery-section Gallery-sectionRight">
-				<div class="Gallery-slickFor">
-					{% for value in index.list %}
-			            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/{{ value.src }}"></div>
-			        {% endfor %}
+					<section class="Gallery-section Gallery-sectionRight">
+						<div class="Gallery-slickFor">
+							{% for value in index.list %}
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/{{ value.src }}"></div>
+					        {% endfor %}
+						</div>
+					</section>
+				</div> <!-- /.Gallery -->
+			</div> <!-- /.col -->
+
+			<div class="col-lg-6">
+				<div class="Biography">
+					<p class="Biography-content">
+						<img class="float-left" src="assets/uploads/{{ index.biography.portrait.src }}" alt="{{ index.biography.portrait.alt }}">
+						Issu de l’école des Beaux-Arts de Marseille où il étudie particulièrement le dessin, il travaille dans  la publicité et fait des illustrations pour la bande dessinée en s’appuyant notamment sur les scénarios de son frère cadet Georges Gavazzi. <br><br>
+						Au début des années 70, il décide de se consacrer entièrement à la peinture. Ses premières toiles sont exposées en 1975. Lumière et chaleur dans des silhouettes de constructions au centre d’un plan vierge et coloré, ambiance ensoleillée où l’on peut imaginer le chant des cigales et le bruit des vagues, généreux dans la matière, il devient une tête de file de la peinture provençale actuelle. Peintre senior, il décide récemment de retrouver une nouvelle jeunesse en arborant la monochromie  et se consacre aujourd’hui à l’art du portrait.
+					</p>
+					<blockquote class="Biography-blockquote">
+						<p>
+							Faut-il peindre ce qu’il y a sur un visage ?<br>
+							Ce qu’il y a dans un visage ?<br>
+							Ou ce qui se cache derrière un visage ?
+						</p>
+						<p><b>Pablo Picasso</b></p>
+					</blockquote>
+
+					<p class="Biography-content">François Gavazzi graduated from "l’Ecole des Beaux Arts" ( School of Fine Arts) where he mainly studied drawing. Afterwards, he worked in advertizing and in illustrating comics, getting his inspiration specially from Georges Gavazzi’s, his younger brother, scenarios.<br><br>
+
+					In the early 70s he decided to dedicate himself solely to painting. His first paintings were exhibited in 1975. Light, heat and sunshine outline the frame of buildings standing in the middle of a colourful panel in which the onlooker can hear the ciccadas singing ot the noise of waves crashing. He has become the leader of the current Provençal painting.<br><br>
+
+					Being now a senior, he has recently decided to refresh his talent by turning to monochromy and is now entirely devoted to the "Art of Portrait making".</p>
+					<blockquote class="Biography-blockquote">
+						<p>
+							Is it necessary to paint what is on a face ?<br>
+							or whats hidden behind the facial features ?
+						</p>
+						<p><b>Pablo Picasso</b></p>
+					</blockquote>
 				</div>
-			</section>
-		</div>
-	</div>
+			</div> <!-- /.col -->
+		</div> <!-- /.row -->
+	</div> <!-- /.container -->
 {% endblock %}

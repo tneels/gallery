@@ -11,6 +11,34 @@
 		max-width: 50%;
 		// text-align: center;
 		position: relative;
+		&Left {
+			flex-basis: 100%;
+			max-width: 100%;
+			order: 2;
+			margin-top: 30px;
+			@media (min-width: 641px){
+				flex-basis: 33.3333%;
+				max-width: 33.3333%;
+				margin-top: 0;
+				order: 0;
+			}
+			@media (min-width: 993px) and (max-width: 1250px) {
+				flex-basis: 50%;
+				max-width: 50%;
+			}
+		}
+		&Right {
+			flex-basis: 100%;
+			max-width: 100%;
+			@media (min-width: 641px) {
+				flex-basis: 66.6666%;
+				max-width: 66.6666%;
+			}
+			@media (min-width: 993px) and (max-width: 1250px) {
+				flex-basis: 50%;
+				max-width: 50%;
+			}
+		}
 		&Wrapper{
 			width: 100%;
 			@media (min-width: 641px) {
@@ -71,30 +99,32 @@
 	}
 }
 
-// responsive
-.Gallery {
-	&-section {
-		&Left {
-			@media (max-width: 960px) {
-				flex-basis: 33.3333%;
-				max-width: 33.3333%;
-			}
-			@media (max-width: 640px) {
-				flex-basis: 100%;
-				max-width: 100%;
-				order: 2;
-				margin-top: 30px;
-			}
+.Biography {
+	margin-top: 30px;
+	&-content{
+		padding-right: 50px;
+		text-align: justify;
+		@media (min-width: 641px) {
+			padding-right: 100px;
 		}
-		&Right {
-			@media (max-width: 960px) {
-				flex-basis: 66.6666%;
-				max-width: 66.6666%;
-			}
-			@media (max-width: 640px) {
-				flex-basis: 100%;
-				max-width: 100%;
-			}
+		@media (min-width: 993px) {
+			padding-right: 200px;
+		}
+		&::first-letter {
+			font-size: 40px;
+			float: left;
+			line-height: 1em;
+		}
+	}
+	&-blockquote {
+		text-align: right;
+		font-style: italic;
+		margin: 20px 0;
+		&:before,
+		&:after{
+			content: "";
+			display: table;
+			clear: both;
 		}
 	}
 }

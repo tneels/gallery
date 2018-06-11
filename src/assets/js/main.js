@@ -31,7 +31,7 @@ $('.Gallery-slickNav').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	asNavFor: '.Gallery-slickFor',
-	dots: true,
+	dots: false,
 	focusOnSelect: true,
 	arrows: true,
 	fade: true,
