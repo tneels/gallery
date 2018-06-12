@@ -21,7 +21,7 @@
 				"title" : "Johnny Hallyday",
 				"dimensions" : "116x89cm",
 				"technique": "peinture à l'huile",
-				"src" : "Johnny_Hallyday.jpeg"
+				"src" : "Johnny_Hallyday.jpg"
 			},
 			{
 				"title" : "Peinture 1",
@@ -39,7 +39,7 @@
 				"title" : "Sat",
 				"dimensions" : "116x89cm",
 				"technique": "peinture à l'huile",
-				"src" : "Sat.jpeg"
+				"src" : "Sat.jpg"
 			},
 			{
 				"title" : "vague",
@@ -51,7 +51,7 @@
 				"title" : "Yves Montand",
 				"dimensions" : "116x89cm",
 				"technique": "peinture à l'huile",
-				"src" : "Yves_Montand.jpeg"
+				"src" : "Yves_Montand.jpg"
 			}
 		],
 		"biography": {
