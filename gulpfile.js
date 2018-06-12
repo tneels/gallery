@@ -69,8 +69,12 @@ gulp.task('css', () => {
 		/Gallery/,
 		/icon/,
 		/container/,
-		/h/
-    ]
+		/h/,
+		/row/,
+		/col/,
+		/float/,
+		/img/
+    ],
     })))
     .pipe(when(argv.prod, nano()))
     // .pipe(plumber.stop())
@@ -184,19 +188,19 @@ gulp.task('ghPages', function() {
 });
 
 // Tâche "build" = toutes les tâches ensemble
-gulp.task('build', gulpsync.sync(['critical', 'css', ['js', 'img', 'uploads']]));
+gulp.task('build', gulpsync.sync(['twig', ['css', 'js', 'img', 'uploads']]));
 gulp.task('deploy', gulpsync.sync(['build', 'ghPages']));
 
 gulp.task('watch', () => {
-  browserSync.init({
-      server: {
-          baseDir: dist
-      }
-  });
-  gulp.watch(`${assets}/uploads/**`, ['uploads']);
-  gulp.watch([`${assets}/less/*.less`, `${assets}/less/**/*.less`], ['css']);
-  gulp.watch([`${assets}/js/*.js`, `${assets}/js/module/*.js`], ['js', browserSync.reload]);
-  gulp.watch([`${source}/views/*.twig`, `${source}/views/**/*.twig`], ['twig', browserSync.reload]);
+	browserSync.init({
+		server: {
+			baseDir: dist
+		}
+	});
+	gulp.watch(`${assets}/uploads/**`, ['uploads']);
+	gulp.watch([`${assets}/less/*.less`, `${assets}/less/**/*.less`], ['css']);
+	gulp.watch([`${assets}/js/*.js`, `${assets}/js/module/*.js`], ['js', browserSync.reload]);
+	gulp.watch([`${source}/views/*.twig`, `${source}/views/**/*.twig`], ['twig', browserSync.reload]);
 });
 
 // Default task
