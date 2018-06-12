@@ -73,7 +73,11 @@ gulp.task('css', () => {
 		/row/,
 		/col/,
 		/float/,
-		/img/
+		/img/,
+		/footer/,
+		/content/,
+		/body/,
+		/html/
     ],
     })))
     .pipe(when(argv.prod, nano()))
