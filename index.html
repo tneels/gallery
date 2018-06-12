@@ -8,9 +8,9 @@
 	<title>Gallery</title>
 
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'> -->
+	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 	<script>
@@ -21,7 +21,7 @@
 	  });
 	</script>
 
-	<link rel="stylesheet" href="assets/css/critical.min.css"> <!-- Load css above the fold -->
+	<link rel="stylesheet" href="assets/css/critical.min.css"> 
 
 	<link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
@@ -30,90 +30,160 @@
 	!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
 	</script>
 
-	<!-- <link rel="stylesheet" href="assets/css/style.css"> <!-- dev -->
+	
 </head>
 </head>
 
 <body>
-	<!-- <header id="header" class="navbar" role="navigation">
-	<div class="container">
-		site header
-	</div>
-</header> -->
+	
 
 	<div class="content content-wrap">
 		
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon-arrow-left" viewBox="0 0 9 32">
+				<title>arrow-left</title>
+				<path d="M7.67 0l0.847 1.773-6.775 14.177 6.811 14.253-0.858 1.797-7.695-16.127z"></path>
+			</symbol>
+			<symbol id="icon-arrow-right" viewBox="0 0 9 32">
+				<title>arrow-right</title>
+				<path d="M0.883 32l-0.847-1.773 6.775-14.177-6.811-14.253 0.858-1.797 7.695 16.127z"></path>
+			</symbol>
+		</defs>
+	</svg>
+
+
 	<div class="container">
-		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<defs>
-				<symbol id="icon-arrow-left" viewBox="0 0 9 32">
-					<title>arrow-left</title>
-					<path d="M7.67 0l0.847 1.773-6.775 14.177 6.811 14.253-0.858 1.797-7.695-16.127z"></path>
-				</symbol>
-				<symbol id="icon-arrow-right" viewBox="0 0 9 32">
-					<title>arrow-right</title>
-					<path d="M0.883 32l-0.847-1.773 6.775-14.177-6.811-14.253 0.858-1.797 7.695 16.127z"></path>
-				</symbol>
-			</defs>
-		</svg>
+		<div class="row">
+			<div class="col-lg-6">
+				<h1>François GAVAZZI</h1>
+				<h2><i>Artiste Peintre</i></h2>
+				<img src="assets/uploads/signatureGAVAZZI.jpg" alt="François GAVAZZI">
 
-		<h1 class="font-2">J.R. Smith</h1>
-		<h2 class="font-2">Smith Gallery</h2>
+				<div class="Gallery">
+					<section class="Gallery-section Gallery-sectionLeft">
+						<div class="Gallery-sectionWrapper">
+							<div class="Gallery-slickNav">
+								
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">Che Gevara</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">Johnny Hallyday</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">Peinture 1</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">Portrait</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">Sat</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">vague</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+									<div class="Gallery-infosWrapper">
+										<div class="Gallery-infos">
+								            <div class="Gallery-infos-title">Yves Montand</div>
+								            <div class="Gallery-infos-dimensions">116x89cm</div>
+								            <div class="Gallery-infos-technique">peinture à l'huile</div>
+										</div>
+									</div>
+						        
+							</div>
+						</div>
+					</section>
 
-		<div class="Gallery">
-			<section class="Gallery-section Gallery-sectionLeft">
-				<div class="Gallery-sectionWrapper">
-					<div class="Gallery-slickNav">
-						
-							<div class="Gallery-infosWrapper">
-								<div class="Gallery-infos">
-						            <div class="Gallery-infos-title font-2">Hello</div>
-						            <div class="Gallery-infos-city">Paris</div>
-						            <div class="Gallery-infos-dates font-2">May 27 - Jun 18</div>
-								</div>
-							</div>
-				        
-							<div class="Gallery-infosWrapper">
-								<div class="Gallery-infos">
-						            <div class="Gallery-infos-title font-2">World</div>
-						            <div class="Gallery-infos-city">London</div>
-						            <div class="Gallery-infos-dates font-2">Jun 21 - Jul 15</div>
-								</div>
-							</div>
-				        
-							<div class="Gallery-infosWrapper">
-								<div class="Gallery-infos">
-						            <div class="Gallery-infos-title font-2">Hello World</div>
-						            <div class="Gallery-infos-city">New York</div>
-						            <div class="Gallery-infos-dates font-2">Jul 18 - Jul 31</div>
-								</div>
-							</div>
-				        
-					</div>
+					<section class="Gallery-section Gallery-sectionRight">
+						<div class="Gallery-slickFor">
+							
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/Che_Gevara.jpg"></div>
+					        
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/Johnny_Hallyday.jpg"></div>
+					        
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/Peinture_1.jpg"></div>
+					        
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/Portrait.jpg"></div>
+					        
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/Sat.jpg"></div>
+					        
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/vague.jpg"></div>
+					        
+					            <div class="Gallery-imgContainer"><img data-lazy="assets/uploads/Yves_Montand.jpg"></div>
+					        
+						</div>
+					</section>
+				</div> 
+			</div> 
+
+			<div class="col-lg-6">
+				<div class="Biography">
+					<p class="Biography-content">
+						<img class="float-left" src="assets/uploads/Portrait_Francois.jpg" alt="François Gavazzi portrait">
+						Issu de l'école des Beaux-Arts de Marseille où il étudie particulièrement le dessin, il travaille dans la publicité et fait des illustrations pour la bande dessinée en s'appuyant notamment sur les scénarios de son frère cadet Georges Gavazzi.<br><br>
+						Au début des années 70, il décide de se consacrer entièrement à la peinture. Ses premières toiles sont exposées en 1975. Lumière et chaleur dans des silhouettes de constructions au centre d'un plan vierge et coloré, ambiance ensoleillée où l'on peut imaginer le chant des cigales et le bruit des vagues, généreux dans la matière, il devient une tête de file de la peinture provençale actuelle. Peintre senior, il décide récemment de retrouver une nouvelle jeunesse en arborant la monochromie et se consacre aujourd'hui à l'art du portrait.
+					</p>
+					<blockquote class="Biography-blockquote">
+						<p>
+							Faut-il peindre ce qu'il y a sur un visage ?<br>
+							Ce qu'il y a dans un visage ?<br>
+							Ou ce qui se cache derrière un visage ?
+						</p>
+						<p><b>Pablo Picasso</b></p>
+					</blockquote>
+
+					<p class="Biography-content">
+						François Gavazzi graduated from "l'École des Beaux Arts" (School of Fine Arts) where he mainly studied drawing. Afterwards, he worked in advertising and in illustrating comics, getting his inspiration specially from Georges Gavazzi's, his younger brother, scenarios.
+						<br><br>
+						In the early 70s he decided to dedicate himself solely to painting. His first paintings were exhibited in 1975. Light, heat and sunshine outline the frame of buildings standing in the middle of a colourful panel in which the onlooker can hear the ciccadas singing ot the noise of waves crashing. He has become the leader of the current Provençal painting.
+						<br><br>
+						Being now a senior, he has recently decided to refresh his talent by turning to monochromy and is now entirely devoted to the "Art of Portrait making".
+					</p>
+					<blockquote class="Biography-blockquote">
+						<p>
+							Is it necessary to paint what is on a face ?<br>
+							or whats hidden behind the facial features ?
+						</p>
+						<p><b>Pablo Picasso</b></p>
+					</blockquote>
 				</div>
-			</section>
-
-			<section class="Gallery-section Gallery-sectionRight">
-				<div class="Gallery-slickFor">
-					
-			            <div class="Gallery-imgContainer"><img src="https://fakeimg.pl/350x200/bada55/?text=Hello"></div>
-			        
-			            <div class="Gallery-imgContainer"><img src="https://fakeimg.pl/350x200/abc/?text=World"></div>
-			        
-			            <div class="Gallery-imgContainer"><img src="https://fakeimg.pl/350x200/?text=Hello+World"></div>
-			        
-				</div>
-			</section>
-		</div>
-	</div>
+			</div> 
+		</div> 
+	</div> 
 	</div>
 
-	<!-- <footer id="footer">
-	<div class="container">
-		&copy; Thomas Neels - SASU
-	</div>
-</footer>
- -->
+	
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script type="text/javascript" src="assets/js/scripts.js"></script>
