@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 html{
 	max-width: 100%;
 	overflow-x: hidden;
@@ -8,13 +12,15 @@ body{
 	font-size: "@{font-size-body}"px;
 	max-width: 100%;
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 	overflow-x: hidden;
 	font-family: serif;
 	margin: 0;
 }
 
-* {
-	box-sizing: border-box;
+.content-wrap{
+	flex: 1 0 auto;
 }
 
 .wf-active body{ font-family: 'PT Serif', serif;}
